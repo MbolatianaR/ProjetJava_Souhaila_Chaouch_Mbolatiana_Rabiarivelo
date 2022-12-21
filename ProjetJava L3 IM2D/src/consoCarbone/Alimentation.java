@@ -11,6 +11,7 @@ public class Alimentation extends ConsoCarbone { // hérite de la classe ConsoCa
 	private static double impact;   // l’impact de l’alimentation de l’utilisateur.rice en termes d’émissions deGES en TCO2eq
 	
 	// Les constantes utilisées dans la classe
+	// J'ai creer un token
 	
 	private final int  c1 = 8;
 	private final double c2 = 1.6;
