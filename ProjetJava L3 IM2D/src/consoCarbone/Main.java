@@ -1,6 +1,7 @@
 package consoCarbone;
+import Utilisatrice.*;
 
-public class Main_ConsoCarbone {
+public class Main {
 
 	public static void main(String[] args) {
 		
@@ -161,10 +162,43 @@ public class Main_ConsoCarbone {
     	ServicesPublics singleton2 = ServicesPublics.getInstance();
     	System.out.println(singleton2.getvaleurServicesPublics());
     	
+    	// verifier utilisatrice:
+		
+		//Utilisatrice lulu = new Utilisatrice();
+		//lulu.afficherEmpreinteUtilisatrice();
+		
+		Utilisatrice toto = new Utilisatrice();
+		Utilisatrice titi = new Utilisatrice();
+		
+		// verifier le fonctionement du getter et du setter de txBoeuf :
+
+		ali1.setTxBoeuf(0.9);
+		ali2.setTxBoeuf(0.5);
+		System.out.println("le taux de repas à base de boeuf de ali1 est : " + ali1.getTxBoeuf());
+		System.out.println("le taux de repas à base de boeuf de ali2 est : " + ali2.getTxBoeuf());
+		
+		// verifier le fonctionement du getter et du setter de txVege :
+		
+		ali1.setTxVege(0.6);
+		System.out.println("le taux de repas végétariens de ali1 est : " + ali1.getTxVege());
+	    
+		// verifier le fonctionnement du getter et du setter de impact :
+		
+		ali1.setImpact();
+		System.out.println("l’impact de l’alimentation de ali1 est : " + ali1.getImpact()+ " TCO2eq ");
+
+		// verifier le fonctionement de la méthode afficher  :
+		
+		ali1.afficher();
+		System.out.println(" \n ");
+		
+		
+		//titi.setAlimentation(ali1);
+		//toto.setAlimentation(ali3);
+		
+		Utilisatrice lulu = new Utilisatrice(ali3, cons1, log1, t2, singleton1);
     	
-    	
-    	
-    	
+    	lulu.afficherEmpreinteUtilisatrice();
     	
 		/*Scanner scanner = new Scanner(System.in);
 		
