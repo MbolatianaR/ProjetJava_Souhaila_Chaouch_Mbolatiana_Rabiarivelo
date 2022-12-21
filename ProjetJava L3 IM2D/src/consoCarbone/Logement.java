@@ -2,7 +2,7 @@ package consoCarbone;
 
 // Logement herite de ConsoCarbonne
 
-/** Logement est un poste de consommation lié au  de l'utilisateur 
+/** Logement est un poste de consommation lie au  de l'utilisateur 
 @author Souhaila
 @author Mbolatiana
 */
@@ -13,9 +13,9 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 	
 	/**la  superficie du logement en m2*/
 	private int superficie;         // la superficie du logement en m2
-	/**la classe énergétique du logement*/
+	/**la classe energetique du logement*/
 	static CE ce;                   // la classe énergétique du logement 
-	/**l'impact du logement en termes d'émissions de GES  en TCO2eq */
+	/**l'impact du logement en termes d'emissions de GES  en TCO2eq */
 	private static double impact;   // l’impact du logement en termes d’émissions de GES en TCO2eq
 
 	// Pour creer un atribut : acces (static/public/private/protected), type de la variable, le nom de la variable ;
@@ -25,6 +25,7 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 	
 	// Constructeur sans parametres
 	
+	/**Constructeur sans parametre de Logement*/
 	public Logement() {
 
 		// Logement herite aussi des attributs de ConsoCarbone => super() => Appel du constructeur de ConsoCarbone
@@ -34,7 +35,7 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 	}
 	
 	// Constructeur parametré
-	
+	/**Constructeur parametre de Logement*/
 	public Logement(int sup, CE ce) {
 		super(); 
 		this.superficie = sup;
@@ -62,21 +63,26 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 	
 	// Getters et Setters de Superficie
 	
+	/**Getter de Superficie*/
 	public double getSuperficie() {
 		return this.superficie;	
 	}
 	
+	
+	/**Setter de Superficie*/
 	public void setSuperficie(int superficie) {
 		this.superficie = superficie;
 	}
 	
 	// Getters et Setters de Impact
 	
+	/**Getter de impact*/
 	public double getImpact() {
 		return impact;
 	}
 	
 	
+	/**Setter de impact*/
 	public void setImpact() {
 		impact = ce.alpha * superficie; 
 	}
@@ -112,6 +118,7 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 	}
 	
     
+	/**Comme Logement herite de ConsoCarbone, qui implemente l'interface comparable, elle herite aussi de cette methode*/
 
 	@Override
 	public int compareTo(ConsoCarbone o) {

@@ -3,7 +3,7 @@ package consoCarbone;
 
 // La classe Transport 
 
-/** Transport  est un poste de consommation lié au transport de l'utilisateur 
+/** Transport  est un poste de consommation lie au transport de l'utilisateur 
 @author Souhaila
 @author Mbolatiana
 */
@@ -12,15 +12,15 @@ public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 
     // Les attributs de la classe Transport    
-	/**Booleen indiquant si l’utilisateur.rice possède une voiture */
+	/**Booleen indiquant si l’utilisateur.rice possede une voiture */
 	private boolean possede;  			// Booleen indiquant si l’utilisateur.rice possède une voiture.
-	/**Taille du véhicule*/
+	/**Taille du vehicule*/
 	Taille taille;            			// Taille du véhicule
-	/**Nombre de kilomètres parcourus par an à l'aide du véhicule */
+	/**Nombre de kilometres parcourus par an a l'aide du vehicule */
 	private int kilomAnnee;           	// Nombre de kilomètres parcourus par an.
-	/**Durée de conservation du véhicule*/
+	/**Duree de conservation du vehicule*/
 	private int amortissement;        	// Durée de conservation du véhicule
-	/**Emissions nécessaires à la fabrication de la voiture*/
+	/**Emissions necessaires a la fabrication de la voiture*/
 	private double fabrication;			// Emissions nécessaires à la fabrication de la voiture
 	
 
@@ -30,7 +30,7 @@ public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 	
 	// Constructeur sans parametre
-	
+	/**Constructeur sans parametre de Transport*/
 	public Transport() {
 		this.possede = false;			// On va considerer que la personne n'a pas de voiture par defaut
 		this.kilomAnnee = 0;
@@ -40,6 +40,7 @@ public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 	// Constructeur avec parametres
 	
+	/**Constructeur parametre de Transport*/
 	public Transport(boolean possede, Taille taille, int kilomAnnee, int amortissement, double fabrication) {
 		this.possede = possede;
 		this.taille = taille;
@@ -51,40 +52,48 @@ public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbo
 		
 	// Getters et Setters de Possede 
 	
+	/**Getter de Possede*/
 	public boolean getPossede() {
 		return this.possede;
 	}
 	
+	/**Setter de possede*/
 	 public void setPossede(boolean p) {
 		this.possede = p;
 	}
 	
 	// Getters et Setters de kilomAnnee
 	
+	 /**Getter de kilomAnnee*/
 	public int getKilomAnnee() {
 		return this.kilomAnnee;
 	}
 	
+	/**Setter de kilomAnnee*/
 	public void setKilomAnnee(int km) {
 		this.kilomAnnee = km;
 	}
 	
 	// Getters et Setters de Amortissement 
 	
+	/**Getter de Amortissement*/
 	public int getAmortissement() {
 		return this.amortissement;
 	}
-		
+	
+	/**Setter de Amortissement*/
 	public void setAmortissement(int amo) {
 		this.amortissement = amo;
 	}
 	
 	// Getters et Setters de Fabrication 
 	
+	/**Getter de Fabrication */
 	public double getFabrication() {
 		return this.fabrication;
 	}
-				
+	
+	/**Setter de Fabrication*/
 	public void setFabrication(int fab) {
 		this.fabrication = fab;
 	}
@@ -105,6 +114,7 @@ public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 	// Pour le setter : 
 	
+	/**Setteur de Impact*/
 	public void setImpact() {
 		if (this.possede == false) {
 			this.impact = 0;
@@ -139,7 +149,8 @@ public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	}
 	
 	// Heritage 
-    
+	/**Comme Transport herite de ConsoCarbone, qui implemente l'interface comparable, elle herite aussi de cette methode*/
+
 	@Override
 	public int compareTo(ConsoCarbone o) {
 		return 0;

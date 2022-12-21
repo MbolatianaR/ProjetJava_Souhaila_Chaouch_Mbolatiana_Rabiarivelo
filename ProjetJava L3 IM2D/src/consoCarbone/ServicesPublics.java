@@ -7,6 +7,7 @@ package consoCarbone;
 
 public class ServicesPublics {
 	
+	/**Singleton redaction*/
 	private static final ServicesPublics singleton = new ServicesPublics();  
 	
 	// Constructeur de ServicesPublics
@@ -15,6 +16,7 @@ public class ServicesPublics {
 	// l'utilisateur ne puisse pas créer de nouvelles instances de cette classe 
 	
 	// constructeur en private pour ne pas autoriser les modifications 
+	/**Constructeur de Services publics qui est d'ailleurs invisible*/
 	private ServicesPublics() {
 		
 	}
@@ -25,7 +27,7 @@ public class ServicesPublics {
 	//Pour pouvoir utiliser un singleton, il faut connaître son instance
 		// C'est le but de cette méthode habituellement nommée getInstance.
 	
-	/**Methode utilisé dans un singleton 
+	/**Methode utilise dans un singleton 
 	 * @return singleton qui sera toujours 1.5
 	*/
 	public static ServicesPublics getInstance() {
@@ -35,6 +37,7 @@ public class ServicesPublics {
 	// Getter de Services Publics
 	// On l'utilise dans la methode afficherEmpreinteUtilisatrice() dans la classe utilisatricec 
 	
+	/**Getter de la valeur de ServicesPublics*/
 	public double getvaleurServicesPublics() {
 		return valeurServicesPublics;
 	}

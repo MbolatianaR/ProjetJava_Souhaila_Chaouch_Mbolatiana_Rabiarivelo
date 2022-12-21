@@ -14,11 +14,11 @@ public abstract class ConsoCarbone implements Comparable<ConsoCarbone> {
     
     // Les attributs de la classe ConsoCarbone
 
-	/** id est l'identifiant unique attribué à chaque instance de la classe
+	/** id est l'identifiant unique attribue a chaque instance de la classe
 	*/
 	protected static int id;        // Un correspondant à un identifiant unique attribué à l’instance
 	
-	/** impact du poste de consommation générique en termes d’émissions de GES en TCO2eq
+	/** impact du poste de consommation generique en termes d’emissions de GES en TCO2eq
 	*/
 	protected double impact;        // Impact en général on ne sais pas vraiment a quoi cela correxpond => Abstract
 	// protected pour pouvoir utiliser impact dans les classes filles
@@ -26,6 +26,7 @@ public abstract class ConsoCarbone implements Comparable<ConsoCarbone> {
 
 	// Constructeur
 	
+	/**Constructeur de ConsoCarbone*/
 	public ConsoCarbone() {
 		ConsoCarbone.id++;
 	}
@@ -33,10 +34,12 @@ public abstract class ConsoCarbone implements Comparable<ConsoCarbone> {
 
 	// Getter et Setter de Id :
 	
+	/**Getter de Id*/
 	public int getId() {
 		return ConsoCarbone.id;
 	}
 	
+	/**Setter de Id*/
 	public void setId() {
 		ConsoCarbone.id = 0;
 	}
@@ -44,11 +47,13 @@ public abstract class ConsoCarbone implements Comparable<ConsoCarbone> {
 	
 	// Getter et Setter de Impact :
 	
+	/**Gette de impact*/
 	public double getImpact() {
 		return this.impact;
 		
 	}
 
+	/**Sette de Impact*/
 	public void setImpact(double impact) {
 		 this.impact = impact;
 	}
