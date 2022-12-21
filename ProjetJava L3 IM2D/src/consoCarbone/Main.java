@@ -167,8 +167,8 @@ public class Main {
 		//Utilisatrice lulu = new Utilisatrice();
 		//lulu.afficherEmpreinteUtilisatrice();
 		
-		Utilisatrice toto = new Utilisatrice();
-		Utilisatrice titi = new Utilisatrice();
+		//Utilisatrice toto = new Utilisatrice();
+		//Utilisatrice titi = new Utilisatrice();
 		
 		// verifier le fonctionement du getter et du setter de txBoeuf :
 

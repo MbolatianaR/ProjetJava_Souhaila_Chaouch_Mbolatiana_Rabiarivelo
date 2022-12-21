@@ -1,19 +1,19 @@
 package Utilisatrice;
 import consoCarbone.*;
 
-/**Utilisatrice correspond à l'utilisater.rice de notre projet 
+/**Utilisatrice correspond a l'utilisater.rice de notre projet 
  * @author Souhaila
  * @author Mbolatiana
 */
 public class Utilisatrice {
 	
-	/**le poste de consommation carbone del’utilisatrice concernant son alimentation.*/
+	/**le poste de consommation carbone de l’utilisatrice concernant son alimentation.*/
 	private Alimentation alimentation;//le poste de consommation carbone del’utilisatrice concernant son alimentation.
-	/***le poste deconsommation carbone de l’utilisatrice concernant ses dépenses en biens de consommation.*/
+	/***le poste deconsommation carbone de l’utilisatrice concernant ses depenses en biens de consommation.*/
 	private	BienConso bienConso; /*le poste deconsommation carbone de l’utilisatrice concernant ses dépenses en biens de consommation.*/
 	/**le poste de consommation carbone de l’utilisatrice concernant son logement*/
 	private Logement logement; /*le poste de consommation carbone de l’utilisatrice concernant son logement.*/
-	/**le poste de consommation carbone de l’utilisatriceconcernant ses déplacements.*/
+	/**le poste de consommation carbone de l’utilisatrice concernant ses deplacements.*/
 	private Transport transport; /*le poste de consommation carbone de l’utilisatriceconcernant ses déplacements.*/
 	/**le poste de consommation carbone de l’utilisatrice concernant son utilisation des services publics*/
 	private ServicesPublics services; /*le poste de consommation carbone de l’utilisatrice concernant son utilisation des services publics.*/
@@ -39,6 +39,7 @@ public class Utilisatrice {
 	*/
 	// Constructeur parametre
 	
+	/**Constructeur parametre de Utilisatrice*/
     public Utilisatrice(Alimentation al, BienConso bienC, Logement lg,Transport trp, ServicesPublics serv) {
 		this.alimentation = al;
 		this.bienConso = bienC;
@@ -60,7 +61,7 @@ public class Utilisatrice {
 		return empreinte;
 	}
     
-    /**affiche sur la console une description détaillée de l’empreinte carbone de l’utilisateur.rice*/
+    /**affiche sur la console une description detaillee de l’empreinte carbone de l’utilisateur.rice*/
     // methode afficherEmpreinteUtilisatrice
 	public void afficherEmpreinteUtilisatrice() {
 		System.out.println("L’empreinte carbone de l’utilisateur.rice est : "+calculerEmpreinte()+ " TCO2eq.");
