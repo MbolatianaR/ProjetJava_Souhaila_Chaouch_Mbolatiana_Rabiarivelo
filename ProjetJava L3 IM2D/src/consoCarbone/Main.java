@@ -95,7 +95,7 @@ public class Main {
     	cons1.setMontant(0.7);
     	System.out.println("Le montant des dépenses annuelles de l’utilisateur.rice. est : " + cons1.getMontant());
     	
-    
+    	
     	// verifier le fonctionement du getter et du setter de impact :
     	
     	cons1.setImpact();
@@ -212,11 +212,6 @@ public class Main {
 	    
 	    Alimentation alimentation1 = new Alimentation(txBoeuf,txVege, impact);*/
 	
-		
-    	// modif 
-    	// modif
-    	
-
 	}
 
 }
