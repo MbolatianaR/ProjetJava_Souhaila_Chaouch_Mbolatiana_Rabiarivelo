@@ -31,6 +31,7 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 		// Logement herite aussi des attributs de ConsoCarbone => super() => Appel du constructeur de ConsoCarbone
 		super(); 
 		this.superficie = 0;
+		this.ce = CE.D; /*CE ici est par defaut D qui est la mediane de tous les CE*/
 		
 	}
 	
@@ -64,7 +65,7 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 	// Getters et Setters de Superficie
 	
 	/**Getter de Superficie*/
-	public double getSuperficie() {
+	public int getSuperficie() {
 		return this.superficie;	
 	}
 	
@@ -90,7 +91,18 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 	
 	
 	// Getters et Setters de CE
-
+	
+	/**Getter de CE*/
+	public double getCE() {
+		return ce.alpha;
+	}
+	
+	/**Setter de CE*/
+	public void setCE(CE ce) {
+		this.ce = ce; 
+	}
+	
+	
 	// On n'a pas besoin de faire des getters et des setters pour CE car on n'a pas de valeur par défault en cas de 
 	// non reponse, ni a-t-on le droit de modifier les valeurs du ce
 	

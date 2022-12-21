@@ -43,7 +43,7 @@ public class Alimentation extends ConsoCarbone { // herite de la classe ConsoCar
 	// Constructeur sans parametres 
 	
 	/**Constructeur sans parametre de la classe Alimentation, on met les valeurs par defaut a 0 */
-	public Alimentation() {
+	public Alimentation() { 
 		super();
 		txBoeuf = 0;
 		txVege = 0;
