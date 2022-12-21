@@ -20,14 +20,11 @@ public class ServicesPublics {
 		return singleton ; 
 	}
 	
-	// Getter et Setter de Services Publics
-
+	// Getter de Services Publics
+	// On l'utilise dans la methode afficherEmpreinteUtilisatrice() dans la classe utilisatricec 
+	
 	public double getvaleurServicesPublics() {
 		return valeurServicesPublics;
-	}
-
-	public void setvaleurServicesPublics(int valeur) {
-		valeurServicesPublics = valeur;
 	}
 
 	}
