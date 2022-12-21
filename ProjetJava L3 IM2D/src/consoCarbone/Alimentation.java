@@ -1,20 +1,31 @@
 package consoCarbone;
 
+/** Alimentation est un poste de consommation lié à l'alimentation de l'utilisateur 
+ @author Souhaila
+ @author Mbolatiana
+ */
+
 // La classe Alimentation 
 
 public class Alimentation extends ConsoCarbone { // hérite de la classe ConsoCarbone
 	
 	// Les attributs de la classe Alimentation:
 	
+	
+	/**le taux de repas à base de boeuf (une valeur entre 0 et 1)*/
 	private double txBoeuf;         // le taux de repas (une valeur entre 0 et 1) à base de boeuf (le type deviande le plus émissif )
+	/**le taux de repas végétariens (une valeur entre 0 et 1)*/
 	private double txVege;          // le taux de repas végétariens ;
+	/**l’impact de l’alimentation de l’utilisateur.rice en termes d’émissions deGES en TCO2eq*/
 	private static double impact;   // l’impact de l’alimentation de l’utilisateur.rice en termes d’émissions deGES en TCO2eq
 	
 	// Les constantes utilisées dans la classe
 	
-	
+	/**constante 1 utilisée lors du calcul de l'impact, c1 = 8 */
 	private final int  c1 = 8;
+	/**constante 2 utilisée lors du calcul de l'impact, c2 = 1.6*/
 	private final double c2 = 1.6;
+	/**constante 3 utilisée lors du calcul de l'impact, c3 = 0.9*/
 	private final double c3 = 0.9;
 	
 	// Constructeurs :
@@ -78,6 +89,9 @@ public class Alimentation extends ConsoCarbone { // hérite de la classe ConsoCa
 	
 	// Methode statique
 	
+	
+	/** affiche l'empreinte carbonne moyenne d'un.e français.e vis à vis de son alimentation
+	*/
 	public static void afficher() {
 		System.out.println("L’empreinte carbone moyenne d’un.e français.e vis-à-vis de son alimentation est de : " + 2353 + "  TCO2eq. ");
 	}
@@ -85,16 +99,18 @@ public class Alimentation extends ConsoCarbone { // hérite de la classe ConsoCa
 
 	// Redéfinition de la methode toString()
 	
+	/** Methode toString() modifiée pour cette classe 
+	 * @return Alimentation{id, impact, txBoeuf, txVege}
+	 */
 	@Override // comme toString() est une methode de la classe object , pour l'utiliser, il faut mettre override
 	public String toString() {
 		return "Alimentation {" + "id = " + this.id + " , Impact = " + this.impact + " , txBoeuf = " + txBoeuf + ", txVege = " + txVege + "} ";
 	}
 
-    // Héritage + implements (Partie 4 )
+    // Héritage 
 
 	@Override
 	public int compareTo(ConsoCarbone o) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 

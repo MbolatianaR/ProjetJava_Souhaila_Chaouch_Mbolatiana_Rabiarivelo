@@ -2,11 +2,16 @@ package consoCarbone;
 
 // La classe BienConso
 
+/** BienConso est un poste de consommation, autre que Logement, Transport et Alimentation, de l'utilisateur 
+@author Souhaila
+@author Mbolatiana
+*/
+
 public class BienConso extends ConsoCarbone { // hérite de la classe ConsoCarbonne
 	
 
     // Les attributs de la classe BienConso
-	
+	/**Le montant des dépenses annuelles de l'utilisateur.rice*/
 	private double montant;         //le montant des dépenses annuelles de l’utilisateur.rice.
 		
 	// Constructeurs
@@ -56,6 +61,8 @@ public class BienConso extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 	// Methode Statique
 	
+	 /** affiche l'empreinte carbonne moyenne d'un.e français.e vis à vis de son BienConso
+		*/
 	public static void afficher() {
 		System.out.println("L’empreinte carbone moyenne d’un.e français.e vis-à-vis de son BienConso est de : " + 2625 + " TCO2eq ");
 		}
@@ -63,15 +70,18 @@ public class BienConso extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 	// Redéfinition de la methode toString()
 	
+	/** Methode toString() modifiée pour cette classe 
+	 * @return BienConso{id, impact, montant}
+	 */
 	@Override // comme toString() est une methode de la classe object , pour l'utiliser, il faut mettre override
 	public String toString() {
 		return "BienConso {" + "id = " + id + " , Impact = " + impact + ", montant = " + montant + "} ";
 	}
 	
+	// Héritage 
 
     @Override
 	public int compareTo(ConsoCarbone o) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 

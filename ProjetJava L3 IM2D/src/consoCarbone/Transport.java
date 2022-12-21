@@ -3,15 +3,24 @@ package consoCarbone;
 
 // La classe Transport 
 
+/** Transport  est un poste de consommation lié au transport de l'utilisateur 
+@author Souhaila
+@author Mbolatiana
+*/
+
 public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbone
 	
 
     // Les attributs de la classe Transport    
-
+	/**Booleen indiquant si l’utilisateur.rice possède une voiture */
 	private boolean possede;  			// Booleen indiquant si l’utilisateur.rice possède une voiture.
+	/**Taille du véhicule*/
 	Taille taille;            			// Taille du véhicule
+	/**Nombre de kilomètres parcourus par an à l'aide du véhicule */
 	private int kilomAnnee;           	// Nombre de kilomètres parcourus par an.
+	/**Durée de conservation du véhicule*/
 	private int amortissement;        	// Durée de conservation du véhicule
+	/**Emissions nécessaires à la fabrication de la voiture*/
 	private double fabrication;			// Emissions nécessaires à la fabrication de la voiture
 	
 
@@ -107,6 +116,8 @@ public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 	// Methode Statique 
 	
+	/** affiche l'empreinte carbonne moyenne d'un.e français.e vis à vis de son moyen de transport
+	*/
 	public static void afficher() {
 		System.out.println("L’empreinte carbone moyenne d’un.e français.e vis-à-vis de son transport est de : " + 2835 + " TCO2eq ");
 	}
@@ -114,7 +125,9 @@ public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 	// Redéfinition de la methode toString()
 	
-	
+	/** Methode toString() modifiée pour cette classe 
+	 * @return Transport{id, impact, possede, kilomAnnee, amortissement, fabrication}
+	 */
 	@Override
 	public String toString() {
 		return "Transport {" + "id = " + id + " , Impact = " + impact + " , Possede = " 
@@ -129,7 +142,6 @@ public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbo
     
 	@Override
 	public int compareTo(ConsoCarbone o) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 

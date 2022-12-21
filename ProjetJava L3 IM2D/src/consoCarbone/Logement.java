@@ -2,12 +2,20 @@ package consoCarbone;
 
 // Logement herite de ConsoCarbonne
 
+/** Logement est un poste de consommation lié au  de l'utilisateur 
+@author Souhaila
+@author Mbolatiana
+*/
+
 public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbone
 
     // Les attributs de la classe 
-
+	
+	/**la  superficie du logement en m2*/
 	private int superficie;         // la superficie du logement en m2
+	/**la classe énergétique du logement*/
 	static CE ce;                   // la classe énergétique du logement 
+	/**l'impact du logement en termes d'émissions de GES  en TCO2eq */
 	private static double impact;   // l’impact du logement en termes d’émissions de GES en TCO2eq
 
 	// Pour creer un atribut : acces (static/public/private/protected), type de la variable, le nom de la variable ;
@@ -85,6 +93,8 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 	
 	// Methode statique :
 	
+	 /** affiche l'empreinte carbonne moyenne d'un.e français.e vis à vis de son Logements
+	*/
 	public static void afficher() {
 		System.out.println("L’empreinte carbone moyenne d’un.e français.e vis-à-vis de son logement est de : " + 2706 + "  TCO2eq. ");
 	}
@@ -92,7 +102,9 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 
 	// Redéfinition de la methode toString()
 	
-	
+	/** Methode toString() modifiée pour cette classe 
+	 * @return Logement{id, impact, superficie, ce}
+	 */
 	@Override
 	public String toString() {
 		return "Logement {" + "id = " + id + " , Impact = " + impact + 
@@ -103,7 +115,6 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 
 	@Override
 	public int compareTo(ConsoCarbone o) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 	
