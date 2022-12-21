@@ -38,7 +38,8 @@ public class Utilisatrice {
 		this.transport = trp;
 		this.services= serv;
 	}
-    
+    //modif
+	//modif
     // Nous n'avons pas creer de getters et de setters pour les attributs de cette classe 
     
     
