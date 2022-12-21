@@ -11,7 +11,7 @@ public class BienConso extends ConsoCarbone { // hérite de la classe ConsoCarbo
 		
 	// Constructeurs
 	
-	// Constructeur sans paramêtres
+	// Constructeur sans parametres
 	
 	public BienConso() {
 		super();

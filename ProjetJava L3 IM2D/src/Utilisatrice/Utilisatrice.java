@@ -51,7 +51,7 @@ public class Utilisatrice {
     
     // methode afficherEmpreinteUtilisatrice
 	public void afficherEmpreinteUtilisatrice() {
-		System.out.println("L’empreinte carbone de l’utilisateur.rice est : "+calculerEmpreinte()+ "TCO2eq.");
+		System.out.println("L’empreinte carbone de l’utilisateur.rice est : "+calculerEmpreinte()+ " TCO2eq.");
 		System.out.println("L’empreinte carbone moyenne de l’utilisateur.rice vis-à-vis de son alimentation est de : "+ alimentation.getImpact() +"  TCO2eq.");
 		System.out.println("L’empreinte carbone moyenne de l’utilisateur.rice vis-à-vis de son logement est de : "+logement.getImpact()+"  TCO2eq.");
 		System.out.println("L’empreinte carbone moyenne de l’utilisateur.rice vis-à-vis de ses BienConso est de : "+bienConso.getImpact()+"  TCO2eq.");
