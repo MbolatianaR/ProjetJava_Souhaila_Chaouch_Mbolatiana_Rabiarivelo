@@ -11,20 +11,20 @@ public class BienConso extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 
     // Les attributs de la classe BienConso
-	/**Le montant des dépenses annuelles de l'utilisateur.rice*/
+	/**Le montant des depenses annuelles de l'utilisateur.rice*/
 	private double montant;         //le montant des dépenses annuelles de l’utilisateur.rice.
 		
 	// Constructeurs
 	
 	// Constructeur sans parametres
-	
+	/**Constructeur sans parametre de BienConso*/
 	public BienConso() {
 		super();
 		this.montant = 0;
 	}
 	
 	// Constructeur parametré
-	
+	/**Constructeur parametre de BienConso*/
 	public BienConso(double mt) {
 		super();
 		this.montant = mt;
@@ -32,12 +32,12 @@ public class BienConso extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 	
 	// Getters et Setters de Montant des dépenses 
-	
+	/**Getter de Montant*/
 	public double getMontant() {
 		return this.montant;
 	}
 	
-	
+	/**Setter de Montant*/
 	public void setMontant(double mt) {
 		this.montant = mt;
 	}
@@ -45,6 +45,7 @@ public class BienConso extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	
 	// Getters et Setters de Impact
 	
+	/**Getter de Impact*/
 	public double getImpact() {
 		return super.impact;
 	}
@@ -53,6 +54,7 @@ public class BienConso extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	// C'est l'attribut impact de la classe mere dont on fait reference, on n'a pas d'impact dans les attributs 
 	// de la classe fille
 	
+	/**Setteur de impact*/
 	 public void setImpact() {
 		impact = 1750 * montant;
 	}
@@ -79,11 +81,11 @@ public class BienConso extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	}
 	
 	// Héritage 
-
+	/**Comme BienConsno herite de ConsoCarbone, qui implemente l'interface comparable, BienConso herite aussi de cette methode*/
     @Override
 	public int compareTo(ConsoCarbone o) {
 		return 0;
 	}
 
-
+    
 }

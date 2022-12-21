@@ -1,16 +1,24 @@
 package Utilisatrice;
-
 import consoCarbone.*;
 
+/**Utilisatrice correspond à l'utilisater.rice de notre projet 
+ * @author Souhaila
+ * @author Mbolatiana
+*/
 public class Utilisatrice {
 	
+	/**le poste de consommation carbone del’utilisatrice concernant son alimentation.*/
 	private Alimentation alimentation;//le poste de consommation carbone del’utilisatrice concernant son alimentation.
+	/***le poste deconsommation carbone de l’utilisatrice concernant ses dépenses en biens de consommation.*/
 	private	BienConso bienConso; /*le poste deconsommation carbone de l’utilisatrice concernant ses dépenses en biens de consommation.*/
+	/**le poste de consommation carbone de l’utilisatrice concernant son logement*/
 	private Logement logement; /*le poste de consommation carbone de l’utilisatrice concernant son logement.*/
+	/**le poste de consommation carbone de l’utilisatriceconcernant ses déplacements.*/
 	private Transport transport; /*le poste de consommation carbone de l’utilisatriceconcernant ses déplacements.*/
-	private ServicesPublics services; /*lepostedeconsommationcarbonedel’utilisatrice concernant son utilisation des services publics.*/
+	/**le poste de consommation carbone de l’utilisatrice concernant son utilisation des services publics*/
+	private ServicesPublics services; /*le poste de consommation carbone de l’utilisatrice concernant son utilisation des services publics.*/
     
-	
+	/*
 	// creation des valeurs par default quand aucune valeur saisie 
 	private final Alimentation ali = new Alimentation();
 	private final BienConso bien = new BienConso();
@@ -28,7 +36,7 @@ public class Utilisatrice {
 		services = serv; 
 	}
 	
-	
+	*/
 	// Constructeur parametre
 	
     public Utilisatrice(Alimentation al, BienConso bienC, Logement lg,Transport trp, ServicesPublics serv) {
@@ -43,12 +51,16 @@ public class Utilisatrice {
     
     
     // Methode calculer Empreinte 
+    
+    /**calcule l'emprunte carbone de l'utilisatrice
+     * @return la somme des impacts de chaque poste de consommation
+     * */
     private double calculerEmpreinte() {
-		double empreinte = alimentation.getImpact()+bienConso.getImpact() + logement.getImpact() + 
-				transport.getImpact();//+ services.getInstance();
+		double empreinte = alimentation.getImpact()+bienConso.getImpact() + logement.getImpact() + transport.getImpact() + services.getvaleurServicesPublics();
 		return empreinte;
 	}
     
+    /**affiche sur la console une description détaillée de l’empreinte carbone de l’utilisateur.rice*/
     // methode afficherEmpreinteUtilisatrice
 	public void afficherEmpreinteUtilisatrice() {
 		System.out.println("L’empreinte carbone de l’utilisateur.rice est : "+calculerEmpreinte()+ " TCO2eq.");
@@ -59,7 +71,7 @@ public class Utilisatrice {
 		System.out.println("L’empreinte carbone moyenne de l’utilisateur.rice vis-à-vis de ses services publics est de : "+ services.getvaleurServicesPublics()+"  TCO2eq.");
 	}
 
-
+	/*Methode ordonner chez Souhaila */
 
 	
 }
