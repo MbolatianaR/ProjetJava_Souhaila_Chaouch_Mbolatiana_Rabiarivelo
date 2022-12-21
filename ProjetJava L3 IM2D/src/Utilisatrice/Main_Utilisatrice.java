@@ -6,6 +6,7 @@ public class Main_Utilisatrice {
 			public static void main(String[] args) {
 		 	
 			// verifier utilisatrice:
+				
 			//Utilisatrice lulu = new Utilisatrice();
 			//lulu.afficherEmpreinteUtilisatrice();
 			
@@ -44,8 +45,8 @@ public class Main_Utilisatrice {
 			System.out.println(" \n ");
 			
 			
-			titi.setAlimentation(ali1);
-			toto.setAlimentation(ali3);
+			//titi.setAlimentation(ali1);
+			//toto.setAlimentation(ali3);
 			
 			
 			}

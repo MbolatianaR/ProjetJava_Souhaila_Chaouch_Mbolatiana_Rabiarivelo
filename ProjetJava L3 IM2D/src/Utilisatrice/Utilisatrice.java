@@ -39,22 +39,17 @@ public class Utilisatrice {
 		this.services= serv;
 	}
     
-    // getters et setters Alimentation :
-	public void setAlimentation(Alimentation ali) {
-		
-	}
-    // getters et setters :
-    
-	
-    // getters et setters :
+    // Nous n'avons pas creer de getters et de setters pour les attributs de cette classe 
     
     
+    // Methode calculer Empreinte 
     private double calculerEmpreinte() {
 		double empreinte = alimentation.getImpact()+bienConso.getImpact() + logement.getImpact() + 
 				transport.getImpact();//+ services.getInstance();
 		return empreinte;
 	}
-
+    
+    // methode afficherEmpreinteUtilisatrice
 	public void afficherEmpreinteUtilisatrice() {
 		System.out.println("l’empreinte carbone de l’utilisateur.rice est : "+calculerEmpreinte());
 		System.out.println("L’empreinte carbone moyenne de l’utilisateur.rice vis-à-vis de son alimentation est de : "+ alimentation.getImpact() +"  TCO2eq.");
