@@ -1,7 +1,12 @@
 package Utilisatrice;
+import java.util.HashMap;
+import java.util.Arrays;
+import java.util.Map;
 import consoCarbone.*;
 
 /**Utilisatrice correspond a l'utilisater.rice de notre projet 
+ * <br> 
+ * 
  * @author Souhaila
  * @author Mbolatiana
 */
@@ -17,26 +22,11 @@ public class Utilisatrice {
 	private Transport transport; /*le poste de consommation carbone de l’utilisatriceconcernant ses déplacements.*/
 	/**le poste de consommation carbone de l’utilisatrice concernant son utilisation des services publics*/
 	private ServicesPublics services; /*le poste de consommation carbone de l’utilisatrice concernant son utilisation des services publics.*/
-    
-	/*
-	// creation des valeurs par default quand aucune valeur saisie 
-	private final Alimentation ali = new Alimentation();
-	private final BienConso bien = new BienConso();
-	private final Logement log = new Logement();
-	private final Transport trans = new Transport();
-	private final ServicesPublics serv = ServicesPublics.getInstance();;
+    /**un booleen qui permet de sortir */
+	private boolean sortir = true;
+	private double temp;
 	
-	// Constructeur sans parametre
 	
-	public Utilisatrice() {
-		alimentation = ali;
-		bienConso = bien;
-		logement = log; 
-		transport = trans; 
-		services = serv; 
-	}
-	
-	*/
 	// Constructeur parametre
 	
 	/**Constructeur parametre de Utilisatrice*/
@@ -47,8 +37,6 @@ public class Utilisatrice {
 		this.transport = trp;
 		this.services= serv;
 	}
-    
-    // Nous n'avons pas creer de getters et de setters pour les attributs de cette classe 
     
     
     // Methode calculer Empreinte 
@@ -72,7 +60,89 @@ public class Utilisatrice {
 		System.out.println("L’empreinte carbone moyenne de l’utilisateur.rice vis-à-vis de ses services publics est de : "+ services.getvaleurServicesPublics()+"  TCO2eq.");
 	}
 
-	/*Methode ordonner chez Souhaila */
+	
+	//Methode afficher
+	
+	/**affiche pour chaque poste de consommation de l'utilisatrice l'empreinte carbonne de ces derniers. Il s'agit d'une liste ordonnee */
+	public void afficher() {
+		double[] tab = {alimentation.getImpact(), bienConso.getImpact(), logement.getImpact(), transport.getImpact(), services.getvaleurServicesPublics()};
+		    for (int i = 0; i<tab.length; i++) {
+		    System.out.print(tab[i]+ "  ");
+		    }
+	}
+	
+	/**ordonne les empreintes carbonne des differents postes de consommation de l'utilisatrice par ordre decroissant.
+	 * <br>
+	 * On utilise cette fonction lorsqu'on souhaite dire a l'utilisatrice quelle poste de consommation doit elle diminuer
+	 *  */
+	public void ordonner() {
+		double[] tab = {alimentation.getImpact(), bienConso.getImpact(), logement.getImpact(), transport.getImpact(), services.getvaleurServicesPublics()};       
+		while (sortir == true) {
+			sortir = false;
+			for(int i = 0; i<tab.length - 1; i++) {
+				if(tab[i]>tab[i+1]) {
+					temp = tab[i];
+					tab[i] = tab[i+1];
+					tab[i+1] = temp;
+					sortir = true;
+				}
+			}
+		}
+		for (int i = 0; i<tab.length; i++) {
+		    System.out.print(tab[i]+" ");
+		    }     
+		}
 
 	
+	/**recommande a l'utilisatrice de diminuer sa consommation pour le poste de consommation le plus eleve*/
+	public void recommendations() {
+		double[] tab = {alimentation.getImpact(), bienConso.getImpact(), logement.getImpact(), transport.getImpact(), services.getvaleurServicesPublics()};
+		String[]typeCons = {"alimentation", "bienConso", "Logement", "Transport", "ServicesPublics"};
+		double max = tab[0];
+		for (int i = 1; i<tab.length; i++) {
+			if(tab[1]>max) {
+				max = tab[1];
+				}
+			}
+		System.out.println(" \n ");
+		System.out.println("il faut diminuer ta consommation vis-à-vis de "+max);
+		
+	}
+		
+	
+	/**collection de logements de l'utilisatrice*/
+	public String  Logement(String cle) {
+		
+		Map <String, String> logement = new HashMap();
+		logement.put("Lila", "Maison");
+		logement.put("Mellissa", "Appartement");
+		logement.put("Mbolatiana", "Maison");
+		logement.put("Souhaila", "Appartement");
+		logement.put("Paul", "Maison");
+		logement.put("Farid", "Appartement");
+		logement.put("Mairie", "Caravane");
+
+		return logement.get(cle);
+		
+	}
+	
+	/**collection de voiture de l'utilisatrice*/
+	public String  Voiture(String cle) {
+		
+		Map <String, String> voiture = new HashMap();
+		voiture.put("Lila", "Audi");
+		voiture.put("Mellissa", "Citroën");
+		voiture.put("Mbolatiana", "BMW");
+		voiture.put("Souhaila", "Mercedes");
+		voiture.put("Paul", "Peugeot");
+		voiture.put("Farid", "Renault");
+		voiture.put("Mairie", "Mercedes");
+
+		return voiture.get(cle);
+
+	}
+
+
+
 }
+
