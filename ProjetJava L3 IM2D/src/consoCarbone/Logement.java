@@ -133,4 +133,9 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 		return 0;
 	}
 	
+	/**calcul l'impact du logement*/
+	public double logementImpact(int sup, CE ce) {
+		return  ce.alpha * superficie;
+	}
+	
 }

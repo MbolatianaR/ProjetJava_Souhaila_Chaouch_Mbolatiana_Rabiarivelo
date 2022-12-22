@@ -156,9 +156,14 @@ public class Transport extends ConsoCarbone { // hérite de la classe ConsoCarbo
 		return 0;
 	}
 
+	
+	/**calcul l'impact des deplacements*/
+	public double transportImpact(boolean posseder, String taille, int kilomAnnee, int amortissement, double fabrication) {
+		return  (kilomAnnee * 1.93 * 0.0001) + fabrication/amortissement;
+
 	}
-	
-	
+}
+
 	
 	
 

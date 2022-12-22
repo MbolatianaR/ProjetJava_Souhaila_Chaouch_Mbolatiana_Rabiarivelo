@@ -122,6 +122,12 @@ public class Alimentation extends ConsoCarbone { // herite de la classe ConsoCar
 		return 0;
 		
 	}
+	
+	public double alimentationImpact(double txBf, double txVge) {
+		double n;
+		n=  c1 * txBf + c2 * (1 - txVge - txBf) + c3 * txVge;
+		return n;
+	}
 
 	
 }

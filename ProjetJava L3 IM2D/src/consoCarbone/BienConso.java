@@ -86,6 +86,12 @@ public class BienConso extends ConsoCarbone { // hérite de la classe ConsoCarbo
 	public int compareTo(ConsoCarbone o) {
 		return 0;
 	}
+    
+    /**calcul l'impact de BienConso */
+    public double BienConsoImpact(double montant) {
 
+    	return 1750*montant;
+
+    }
     
 }
