@@ -67,7 +67,7 @@ public class Main {
     	
     	// verifier le fonctionement du getter et du setter de impact :
     	
-    	log1.setImpact();
+    	//log1.setImpact();
     	System.out.println("L'impact du Logement de log1 est : " + log1.getImpact() + " TCO2eq ");
     	
     	// verifier le fonctionement de la méthode afficher  :

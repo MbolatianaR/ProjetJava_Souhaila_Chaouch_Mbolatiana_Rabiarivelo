@@ -84,8 +84,8 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 	
 	
 	/**Setter de impact*/
-	public void setImpact() {
-		impact = ce.alpha * superficie; 
+	public void setImpact(int sup, CE ce) {
+		 impact = ce.alpha * sup; 
 	}
 	
 	
@@ -101,10 +101,6 @@ public class Logement extends  ConsoCarbone{ // hérite de la classe ConsoCarbon
 	public void setCE(CE ce) {
 		this.ce = ce; 
 	}
-	
-	
-	// On n'a pas besoin de faire des getters et des setters pour CE car on n'a pas de valeur par défault en cas de 
-	// non reponse, ni a-t-on le droit de modifier les valeurs du ce
 	
 	
 	//Une méthode statique est une méthode de la classe (attribut aussi)

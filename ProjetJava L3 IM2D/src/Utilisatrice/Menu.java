@@ -1,5 +1,7 @@
 package Utilisatrice;
 
+
+/***/
 public class Menu {
 	public static void main(String[] args) {
         int sousmenu = 0;
@@ -10,7 +12,7 @@ public class Menu {
 	System.out.println("Sous menu 2 : tapez 2");
 	System.out.println("Sous menu 3 : tapez 3");
         System.out.println("quitter : tapez 9");
-	sousmenu = Lire.i();
+	//sousmenu = Lire.i();
 	switch(sousmenu)
 	{
 		case 1 :{
@@ -19,7 +21,7 @@ public class Menu {
 					System.out.println("Sous menu 1-1 : tapez 1");
 					System.out.println("Sous menu 1-2 : tapez 2");
                                         System.out.println("quitter : tapez 9");
-					choix = Lire.i();
+					//choix = Lire.i();
 					switch(choix){
 						case 1 : System.out.println("Sous menu 1-1"); break;
 						case 2 : System.out.println("Sous menu 1-2"); break;
@@ -32,4 +34,4 @@ public class Menu {
                 case 9 : arret = true; break;
 		default : System.out.println("entrez un choix entre 1 et 3"); break;
 	}
-                }}
+        }}}
